@@ -11,10 +11,10 @@ function Details() {
                 <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78" />
             </ImgTitle>
             <Controls>
-                <Play></Play>
-                <Trailer></Trailer>
-                <Add></Add>
-                <Group></Group>
+                <Play><img src="/images/play-icon-black.png" /><span>PLAY</span></Play>
+                <Trailer><img src="/images/play-icon-white.png" /><span>TRAILER</span></Trailer>
+                <Add><span>+</span></Add>
+                <Group><img src="/images/group-icon.png" /></Group>
             </Controls>
         </Container>
     )
@@ -47,6 +47,7 @@ const Background=styled.div`
 `
 
 const ImgTitle = styled.div`
+    padding:30px 0 ;
     height: 30vh;
     width: 35vw;
     min-height: 170px;
@@ -58,6 +59,46 @@ const ImgTitle = styled.div`
     }
 
 `
-const Controls=style.div`
+const Controls=styled.div`
+    display:flex;
+    align-items:center;
+`
+const Play=styled.button`
+    border-radius: 4px;
+    font-size:15px;
+    display:flex;
+    margin-right:22px;
+    padding:0 24px;
+    align-items:center;
+    height: 46px;
+    background: rgb(249,249,249);
+    border:none;
+    letter-spacing: 1.8px;
+    &:hover{
+        background:rgb(198,198,198);
+    }
+`
+const Trailer=styled(Play)`
+    background: rgba(0,0,0,0.3);
+    border:1px solid rgb(249,249,249);
+    color:rgb(249,249,249);
+
+`
+const Add=styled.button`
+width:44px;
+height:44px;
+span{
+    font-size:30px;
+    color:white;
+}
+border-radius: 50%;
+border:2px solid white;
+display:flex;
+margin-right:22px;
+align-items:center;
+justify-content:center;
+background-color: rgba(0,0,0,0.6);
+`
+const Group=styled(Add)`
 
 `
