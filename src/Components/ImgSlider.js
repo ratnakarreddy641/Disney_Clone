@@ -11,7 +11,7 @@ function ImgSlider() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay:true
+        //autoplay:true
       };
     return (
         <Carousel{...settings}>
@@ -20,7 +20,11 @@ function ImgSlider() {
             </Wrap>
             <Wrap>
             <img src="/images/slider-badag.jpg" />
-        </Wrap>
+            </Wrap>
+            <Wrap>
+            <h4>Hello Martha</h4>
+            <img src="/images/slider-scales.jpg" />
+            </Wrap>
         </Carousel>
     )
 }
@@ -39,6 +43,14 @@ const Carousel = styled(Slider)`
 `
 const Wrap = styled.div`
     cursor:pointer;
+    position:relative;
+
+    h4{
+        position:absolute;
+        display:flex;
+        ;
+      
+    }
     img{
         border: 4px solid transparent;
         width:100%;
@@ -53,3 +65,4 @@ const Wrap = styled.div`
         }
     }
 `
+
